@@ -41,9 +41,14 @@ function rangeInit () {
  */
 function writeStyle (obj) {
     // var find = inlineStyleContent.map(x => x.id).indexOf(obj.id);
-    var find = inlineStyleContent.map(function () {
-      alert('hi');
-    });
+    // var find = inlineStyleContent.map(function (x) {
+    //   return x.id.indexOf(obj.id);
+    // });
+
+    var find = inlineStyleContent.map(function (x) {
+      return x.id;
+    }).indexOf(obj.id);
+
     var styleText = '';
 
     if (find === -1) {
@@ -51,10 +56,6 @@ function writeStyle (obj) {
     } else {
         inlineStyleContent[find] = obj;
     }
-
-    // for (var item of inlineStyleContent) {
-    //     styleText += '#' + item.id + '::-webkit-slider-runnable-track{background-size:' + item.percent + '% 100%} ';
-    // }
 
     for (var i = 0; i < inlineStyleContent.length; i++) {
       var item = inlineStyleContent[i];
@@ -76,6 +77,7 @@ function handleAudio () {
 
   audio.onloadeddata = function () {
     seekbar.max = audio.duration;
+    rangeInit();
   }
 
   audio.ontimeupdate = function () {
