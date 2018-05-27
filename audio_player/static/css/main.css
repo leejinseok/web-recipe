@@ -1,0 +1,130 @@
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb,
+input[type='range'] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+input[type='range'] {
+    width: 300px;
+    background-clip: content-box;
+    margin: 0;
+}
+
+input[type='range']:focus {
+    outline: none
+}
+
+input[type='range'] {
+    background-color: #f6f6f6;
+    border-top: #f6f6f6;
+    border-bottom: #f6f6f6
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: 2px;
+    border-radius: 0
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: translateY(-1.8px);
+    background-color: #fff;
+    border: none
+}
+
+#seekbar::-webkit-slider-runnable-track {
+/*     background: linear-gradient(90deg, #48baec, #48baec) 0 100% no-repeat content-box; */
+}
+
+#seekbar::-webkit-slider-thumb {
+    background-color: #48baec
+}
+
+.img-mic {
+    width: 35px;
+    margin: auto;
+    margin-bottom: 28px;
+    display: block
+}
+
+audio {
+    display: none
+}
+
+.time-machine {
+    margin-top: 31.5px;
+    width: 100%;
+    padding-left: 15.5px;
+    padding-right: 15.5px
+}
+
+.time-machine table {
+    margin-top: 19px;
+    width: 100%
+}
+
+.time-machine table td:first-child {
+    padding-left: 4px;
+    width: 50%
+}
+
+.time-machine table td:first-child .current-time {
+    color: #2cacec
+}
+
+.time-machine table td:last-child {
+    padding-right: 4px;
+    width: 50%
+}
+
+.img-audio-play-btn {
+    margin-top: 0;
+    display: block;
+    margin: 0 auto;
+    height: 21px
+}
+
+.current-time,.total-time {
+    color: #818181;
+    font-family: "Noto Sans KR",sans-serif;
+    font-weight: 300;
+    font-size: 12px
+}
